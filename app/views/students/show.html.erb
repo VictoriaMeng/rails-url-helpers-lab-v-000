@@ -1,5 +1,5 @@
 <h1><%= link_to @student.to_s, student_path(@student) %></h1>
-<% if @student.timestamps %>
+<% if @student.has_attribute?(:timestamps)%>
 <% else %>
   "This student is currently inactive."
 <% end %>
